@@ -21,13 +21,11 @@ namespace ModelessDialogBox
 
         private void colorChanger_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // Now that spelling form is closed, allow button to be clicked
             openModalBoxButton.Enabled = true;
         }
 
         private void colorChanger_ChangeColor(Color color)
         {
-            // Show the word from the spelling form 
             BackColor = color;
         }
 
@@ -40,10 +38,8 @@ namespace ModelessDialogBox
             {
                 colorChanger = new ColorChanger();
 
-                // Notify us when spelling form is closed
                 colorChanger.FormClosed += colorChanger_FormClosed;
 
-                // Notify us when spelling form's word is changed
                 colorChanger.ChangeColor += colorChanger_ChangeColor;
 
                 // Show modeless dialog box
